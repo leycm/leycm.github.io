@@ -498,7 +498,9 @@ h1{
 
 .projects .title {
     left: 150px;
+    width: max-content;
 }
+
 @media screen and (max-width: 1345px) {
     .header_img {
         left: 420px;
