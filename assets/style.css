@@ -1,0 +1,607 @@
+@font-face {
+    font-family: 'fminecrat';
+    src: url('fonts/minecraft.ttf') format('truetype');
+}
+
+:root {
+    --background: #060606;
+    --text: #ffffff;
+    --text-secondary: #b6b6b6;
+    --highlight: #ef003f;
+    --bg-secondary: #00000007;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --secondary: #141414;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "minecraft", sans-serif;
+    margin: 0;
+    padding: 0;
+	::selection { background: #242424; color: #fff; }
+}
+
+a {
+    color: var(--text);
+    font-family: sans-serif;
+}
+
+p {
+    color: var(--text);
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    letter-spacing: 0.1em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    margin: 0px 250px;
+    margin-bottom: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    text-decoration: none;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.3s ease-in-out;
+    font-family: "minecraft", sans-serif;
+}
+
+nav a:hover {
+    color: var(--highlight);
+}
+
+button{
+  background: var(--highlight);
+  border: 1px solid var(--highlight);
+  border-radius: 6px;
+  box-shadow: var(--shadow) 1px 2px 4px;
+  box-sizing: border-box;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  height: 26px;
+}
+
+button:hover,
+button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: var(--highlight);
+}
+
+button:active {
+  opacity: .5;
+}
+
+.ico_button {
+    background-color: initial;
+    background-position: 0 0;
+    padding: 0px 7px;
+}
+
+.buttonlinks button{
+    margin: 0 5px;
+}
+
+.underline{
+    text-decoration: underline;
+    text-decoration-color: var(--text);
+    text-decoration-thickness: 2px;
+}
+.underline:hover{
+    text-decoration: underline;
+    text-decoration-color: var(--highlight);
+    text-decoration-thickness: 2px;
+}
+
+button img {
+    width: 32px;
+    height: 32px;
+}
+
+header svg {
+    width: 50px;
+    height: 50px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawSvg 10s ease forwards;
+    position: relative;
+    top: 7px;
+    left: 10px;
+}
+
+header path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawSvg 6s ease-in-out 1 forwards;
+    fill:transparent;
+    stroke:var(--highlight);
+    stroke-width:2.31684;
+    stroke-opacity:1
+}
+
+section {
+    padding: 0 300px;
+    padding-bottom: 100px;
+}
+
+h1{
+    font-size: 6rem;
+    margin: 0px;
+}
+
+@keyframes drawSvg {
+    0% {
+        stroke-dashoffset: 500;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.hero {
+    padding: 0 400px;
+    overflow-y: visible;
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.hero .content {
+    width: 600px;
+    margin-top: 150px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+    line-height: 1.4rem;
+}
+
+.hero .info {
+    scale: 0.8;
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    color: gray;
+    position: relative;
+    right: 60px;
+    top: 5px;
+}
+
+.hero .location, .age {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hero .tag_icons {
+    margin-right: 5px;
+    font-size: 23px;
+    position: relative;
+    top: 3px;
+}
+
+.hero button{
+    margin-right: 10px;
+}
+
+.trans a {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+}
+
+.trans{
+    padding: 0px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.header_img {
+    position: relative;
+    scale: 0.6;
+    bottom: 740px;
+    left: 550px;
+    z-index: -1;
+}
+
+.gray{
+    background-color:  #0E0E0E;
+    padding-bottom: 50px;
+}
+
+.title{
+    cursor: default;
+}
+
+.gray .title {
+    color: var(--text);
+    font-size: 3rem;
+    margin: 0;
+    position: relative;
+    top: 40px;
+}
+
+.gray .num {
+    color: #1A1A1A;
+    font-size: 10rem;
+    margin: 0;
+}
+
+.gray .num::selection { background: #24242400; color: var(--secondary);}
+
+.gray .title .text {
+    margin: 0;
+    position: relative;
+    bottom: 110px;
+    left: 50px;
+}
+
+.gray .title .text i {
+    font-size: 2.7rem;
+    position: relative;
+    top: 5px;
+    right: 10px;
+}
+
+.black{
+    background-color:  transparent;
+    padding-bottom: 50px;
+}
+
+.black .title {
+    color: var(--highlight);
+    font-size: 1.7rem;
+    margin: 0;
+    position: relative;
+    top: 20px;
+    float: right;
+    right: 300px;
+}
+
+.black .num {
+    color: var(--secondary);
+    font-size: 10rem;
+    margin: 0;
+}
+
+.black .num::selection { background: #24242400; color: #0e0e0e;}
+
+.black .title .text {
+    margin: 0;
+    position: relative;
+    bottom: 100px;
+    left: 25px;
+}
+
+.black .title .text i {
+    font-size: 2rem;
+    position: relative;
+    top: 5px;
+    right: 10px;
+}
+
+.black .title .test::selection {background: #24242400; color: var(--highlight);}
+.black .title .test i::selection {background: #24242400; color: var(--highlight);}
+
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+.about .article {
+    background: var(--background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+    position: relative;
+    height: 110px;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .about .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about .article {
+        width: 100%;
+        height: 70px;
+    }
+    .news {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .news img {
+        max-width: 100%;
+    }
+}
+
+.about .icon {
+    position: relative;
+    bottom: 20px;
+    font-size: 24px;
+    color: var(--text);
+    background-color: var(--highlight);
+    padding: 10px;
+    right: 20px;
+    border-radius: 5px 0 0 0;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.about .icon::selection{
+    background: var(--highlight);
+}
+
+.about h5 {
+    margin: 0px;
+    width: max-content;
+    font-size: 1.4rem;
+    position: relative;
+    left: 60px;
+    bottom: 50px;
+}
+
+.about p {
+    position: relative;
+    bottom: 45px;
+}
+
+.news {
+    height: 500px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 20px;
+    width: 628px;
+}
+
+.news .content {
+    z-index: 10;
+    position: relative;
+    float: right;
+    left: 120px;
+    bottom: 50px;
+}
+
+.news .title {
+    color: var(--highlight);
+    font-size: 1.7rem;
+    margin: 0;
+    position: relative;
+    top: 60px;
+    float: right;
+    right: 100px;
+}
+
+.news .content h4 {
+    font-size: 2rem;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.news .content p {
+    line-height: 1.7rem;
+    width: 400px;
+}
+
+.news img {
+    scale: 1.5;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    width: 285px;
+    height: 178px;
+}
+
+.item {
+    width: 384px;
+    height: 256px;
+}
+
+.item img {
+    border-radius: 10px;
+}
+
+.item .hover {
+    width: 384px;
+    height: 256px;
+    position: relative;
+    bottom: 260px;
+}
+
+.item .hover:hover .box{
+    transform: translateY(0px);
+} 
+
+.item .hover .box {
+    background-color: transparent;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    height: 66px;
+    top: 170px;
+    padding: 10px 10px;
+    transform: translateY(360px);
+    transition: bottom 10s ease-out;
+}
+
+.item .hover .box h5{
+    position: relative;
+    font-family: "Minecraft";
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+}
+
+.item .hover .box .tags{
+    background-color: var(--highlight);
+    width: max-content;
+    padding: 10px;
+    position: relative;
+    right: 10px;
+    top: 10px;
+    border-radius: 0 10px 0 10px;
+    padding-right: 20px;
+    font-weight: 700;
+}
+
+.item .hover .box i{
+    position: relative;
+    left: 320px;
+    bottom: 50px;
+    scale: 3;
+}
+
+.projects {
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 50px;
+}
+
+.projects .title {
+    left: 150px;
+}
+@media screen and (max-width: 1345px) {
+    .header_img {
+        left: 420px;
+        bottom: 700px;
+    }
+    
+    header {
+        margin: 0px 100px;
+        margin-bottom: 100px;
+    }
+
+    section {
+        padding: 0 150px;
+    }
+
+    .hero {
+        padding: 0 250px;
+    }
+
+    .hero .content {
+        width: 500px;
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    header {
+        margin: 0px 0px;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    header {
+        margin-bottom: 100px;
+    }
+
+    .logo a {
+        visibility:hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .logo {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .hero{
+        padding: 0 50px;
+    }
+
+    .header_img{
+        left: 350px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    header button {
+        visibility:hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .buttonlinks{
+        visibility:hidden;
+        width: 0px;
+        height: 0px;
+    }
+
+    .header_img{
+        left: 240px;
+        scale: 0.5;
+        bottom: 810px;
+    }
+}
+
+@media screen and (max-width: 1020px) {  
+    .news img {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        right: 80px;
+    }
+
+    .news .box {
+        position: relative;
+        right: 70px;
+    }
+}
+
+@media screen and (max-width: 850px) {  
+    .news img {
+        width: 0px;
+        height: 300px;
+        position: relative;
+        right: 80px;
+    }
+
+    .news .box {
+        position: relative;
+        right: 200px;
+        width: 600px;
+    }
+}
