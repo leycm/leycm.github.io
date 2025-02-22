@@ -1,6 +1,13 @@
 @font-face {
-    font-family: 'fminecrat';
+    font-family: 'minecrat';
     src: url('fonts/minecraft.ttf') format('truetype');
+    font-weight: 1 1000;
+}
+
+@font-face {
+  font-family: 'Inter var';  
+  src: url('fonts/minecraft.ttf') format('truetype');
+  font-weight: 1 1000;
 }
 
 :root {
