@@ -135,6 +135,27 @@ button:active {
     text-decoration-thickness: 2px;
 }
 
+footer svg {
+    width: 50px;
+    height: 50px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawSvg 10s ease forwards;
+    position: relative;
+    top: 7px;
+    left: 10px;
+}
+
+footer path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: drawSvg 6s ease-in-out 1 forwards;
+    fill:transparent;
+    stroke:var(--highlight);
+    stroke-width:2.31684;
+    stroke-opacity:1
+}
+
 button img {
     width: 32px;
     height: 32px;
@@ -497,6 +518,95 @@ h1{
     width: max-content;
 }
 
+footer {
+    padding: 40px 20px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--highlight);
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-column p {
+    width: 150px;
+    color: var(--text-secondary);
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: var(--text);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--highlight);
+    display: inline-block;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-secondary);
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #555;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+
+.footer-bottom a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    float: left;
+    font-family: "minecraft", sans-serif;
+    margin: 0;
+}
+
+.footer-bottom span{
+    color: var(--text);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom .r {
+    float: right;
+    margin: 0;
+}
+
 @media screen and (max-width: 1360px) {
     .header_img, .cookie_img {
         left: 420px;
@@ -560,14 +670,14 @@ h1{
         margin-bottom: 100px;
     }
 
-    .logo a {
+    header .logo a {
         visibility:hidden;
         width: 0px;
         height: 0px;
         transition: all 0.0s ease-in-out;
     }
 
-    .logo {
+    header .logo {
         width: 50px;
         transition: all 0.0s ease-in-out;
     }
@@ -587,6 +697,27 @@ h1{
 
     .header_img, .cookie_img{
         left: 260px;
+    }
+
+    .footer-hidde{
+        visibility: hidden;
+        width: 0px;
+        height: 0px;
+        margin: 0px;
+        display: none;
+    }
+
+    .footer-column ul{
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer-content .logo{
+        width: max-content;
+    }
+
+    .horizontal-list ul li {
+        display: inline-block; 
     }
 }
 
@@ -622,6 +753,159 @@ h1{
     }
 }
 
+@media (max-width: 717px) {
+    .footer-bottom a {
+        float: none;
+        margin:  0 auto;
+    }
+
+    .footer-bottom .r {
+        float: none;
+        margin: 0 auto;
+    }
+
+    .footer-bottom{
+        text-align: center;
+    }
+}
+
 .needcookies{
     visibility: hidden;
+}
+
+
+/* Allgemeine Stile für das Impressum */
+.impressum {
+    padding: 50px 0;
+}
+
+.impressum .title {
+    margin-bottom: 50px;
+    position:static;
+}
+
+.impressum .title .num {
+    color: var(--secondary);
+    font-size: 10rem;
+    margin: 0;
+}
+
+.impressum .title .text {
+    margin: 0;
+}
+
+.impressum .title .text i {
+    font-size: 2.7rem;
+    color: var(--highlight);
+}
+
+.impressum .title .test {
+    color: var(--text);
+    font-size: 3rem;
+}
+
+.impressum h2 {
+    width: max-content;
+}
+
+.impressum .content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.impressum h2 {
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.impressum h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--highlight);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.impressum h2:hover::after {
+    transform: scaleX(1);
+}
+
+.impressum p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.impressum a {
+    color: var(--highlight);
+    text-decoration: none;
+    position: relative;
+}
+
+.impressum a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--highlight);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.impressum a:hover::after {
+    transform: scaleX(1);
+}
+
+.impressum a:hover {
+    color: var(--text);
+}
+
+.impressum .content p strong {
+    color: var(--text);
+    font-weight: bold;
+}
+
+/* Hover-Effekte für Links */
+.impressum .content a:hover {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .impressum .title .num {
+        font-size: 6rem;
+    }
+
+    .impressum .title .text {
+        bottom: 80px;
+        left: 30px;
+    }
+
+    .impressum .title .test {
+        font-size: 2rem;
+    }
+
+    .impressum .content {
+        padding: 15px;
+    }
+
+    .impressum h2 {
+        font-size: 1.5rem;
+    }
 }
