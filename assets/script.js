@@ -1,4 +1,4 @@
-const maxImageNumber = 2;
+const maxImageNumber = 5;
 
 window.onload = function() {
   const randomImageIndex = Math.floor(Math.random() * maxImageNumber) + 1;

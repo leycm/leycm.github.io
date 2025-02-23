@@ -1,13 +1,7 @@
 @font-face {
-    font-family: 'minecrat';
+    font-family: 'minecraft';
     src: url('fonts/minecraft.ttf') format('truetype');
     font-weight: 1 1000;
-}
-
-@font-face {
-  font-family: 'Inter var';  
-  src: url('fonts/minecraft.ttf') format('truetype');
-  font-weight: 1 1000;
 }
 
 :root {
@@ -18,6 +12,10 @@
     --bg-secondary: #00000007;
     --shadow: rgba(0, 0, 0, 0.1);
     --secondary: #141414;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -41,6 +39,7 @@ p {
 
 h1, h2, h3, h4, h5{
     letter-spacing: 0.1em;
+    font-family: "minecraft", sans-serif;
 }
 
 header {
@@ -190,13 +189,14 @@ h1{
 }
 
 .hero .content {
-    width: 600px;
+    width: 700px;
     margin-top: 150px;
 }
 
 .hero p {
     margin-bottom: 20px;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .hero .info {
@@ -241,7 +241,7 @@ h1{
 .header_img {
     position: relative;
     scale: 0.6;
-    bottom: 740px;
+    bottom: 540px;
     left: 550px;
     z-index: -1;
 }
@@ -554,6 +554,23 @@ h1{
     .logo {
         width: 50px;
     }
+
+    .news img {
+        width: 0px;
+        height: 300px;
+        position: relative;
+        right: 80px;
+    }
+
+    .news .box {
+        position: relative;
+        right: 200px;
+        width: 600px;
+    }
+
+    .header_img{
+        left: 50px;
+    }
 }
 
 @media screen and (max-width: 1050px) {
@@ -566,7 +583,7 @@ h1{
     }
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 780px) {
     header button {
         visibility:hidden;
         width: 0px;
@@ -582,7 +599,7 @@ h1{
     .header_img{
         left: 240px;
         scale: 0.5;
-        bottom: 810px;
+        bottom: 770px;
     }
 }
 
@@ -597,20 +614,5 @@ h1{
     .news .box {
         position: relative;
         right: 70px;
-    }
-}
-
-@media screen and (max-width: 850px) {  
-    .news img {
-        width: 0px;
-        height: 300px;
-        position: relative;
-        right: 80px;
-    }
-
-    .news .box {
-        position: relative;
-        right: 200px;
-        width: 600px;
     }
 }
