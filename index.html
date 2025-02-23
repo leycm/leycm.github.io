@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script src="assets/script.js"></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ley CM</title>
         <link rel="stylesheet" href="assets/style.css">
         <link rel="stylesheet" href="assets/slider.css">
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
@@ -30,7 +29,19 @@
                 <button onclick=" window.open('http://google.com','_blank')">GET IN TOUCH</button>
             </div>
         </header>
-        <section class="hero black" role="hero">
+        <section id="cookie-consent" class="hero black cookies" role="cookie">
+            <div class="content">
+                <h1>HI, I'M LEY</h1>
+                <div class="info">
+                    <span class="location" style="letter-spacing: 0.2em;" >Cookies</span>
+                    <span class="age" style="letter-spacing: 0.2em;" >Google Fonts, Font Awesome</span>
+                </div>
+                <p>Wir verwenden Cookies sowie Drittanbieter-Dienste für Schriften und Icons. Diese helfen uns.</p>
+                <button id="accept-cookies">AKZEPTIEREN</button>
+            </div>
+            <img class="cookie_img" src="assets/img/header/cookie.png" alt="">
+        </section>
+        <section class="needcookies hero black" role="hero">
             <div class="content">
                 <h1>HI, I'M LEY</h1>
                 <div class="info">
@@ -43,7 +54,7 @@
             </div>
             <img class="header_img" src="" alt="">
         </section>
-        <section class="gray about">
+        <section class="needcookies gray about">
             <div class="title">
                 <h4 class="num">01</h4>
                 <h4 class="text"><i class="material-icons">contacts</i>ABOUT ME</h4>
@@ -66,7 +77,7 @@
                 </div>
             </div>
         </section>
-        <section class="black news">
+        <section class="needcookies black news">
             <img src="assets/img/projekts/noimg.png" alt="">
             <div class="box">
                 <div class="title">
@@ -80,7 +91,7 @@
                 </div>
             </div>
         </section>
-        <section class="gray projects">
+        <section class="needcookies gray projects">
             <div class="title">
                 <h4 class="num">03</h4>
                 <h4 class="text"><i class="material-icons">rebase_edit</i>PROJEKTE</h4>
@@ -213,7 +224,7 @@
                 </div>
             </div>
         </section>
-        <section class="black news">
+        <section class="needcookies black news">
             <img src="assets/img/projekts/noimg.png" alt="">
             <div class="box">
                 <div class="title">
@@ -227,6 +238,5 @@
                 </div>
             </div>
         </section>
-        <script src="assets/script.js"></script>
     </body>
 </html>

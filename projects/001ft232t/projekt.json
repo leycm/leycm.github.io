@@ -1,7 +1,0 @@
-{
-    "name":"Test Projekt",
-    "tools":["Java","Bukkit","Paper"],
-    "img":"img.png",
-    "readme":"info.md",
-    "desc":"Cooles Test Projekt"
-}

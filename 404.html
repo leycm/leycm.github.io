@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Seite nicht gefunden</title>
+</head>
+<body>
+    <h1>404 - Seite nicht gefunden</h1>
+    <p>Die angeforderte Seite <strong id="address"></strong> existiert nicht.</p>
+    <a href="projects/index.html">Zurück zur Startseite</a>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const address = urlParams.get('address');
+        document.getElementById('address').textContent = address || 'unbekannt';
+    </script>
+</body>
+</html>

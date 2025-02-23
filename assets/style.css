@@ -24,7 +24,7 @@ body {
     font-family: "minecraft", sans-serif;
     margin: 0;
     padding: 0;
-	::selection { background: #242424; color: #fff; }
+    ::selection { background: #242424; color: #fff; }
 }
 
 a {
@@ -197,6 +197,7 @@ h1{
     margin-bottom: 20px;
     line-height: 1.5rem;
     font-size: 1.3rem;
+    width: 400px;
 }
 
 .hero .info {
@@ -238,7 +239,7 @@ h1{
     border: transparent;
 }
 
-.header_img {
+.header_img, .cookie_img {
     position: relative;
     scale: 0.6;
     bottom: 540px;
@@ -341,24 +342,6 @@ h1{
     position: relative;
     height: 110px;
     overflow: visible;
-}
-
-@media (max-width: 768px) {
-    .about .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .about .article {
-        width: 100%;
-        height: 70px;
-    }
-    .news {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .news img {
-        max-width: 100%;
-    }
 }
 
 .about .icon {
@@ -503,13 +486,19 @@ h1{
     padding-bottom: 50px;
 }
 
+.news .box {
+    position: relative;
+    right: 10px;
+    width: 600px;
+}
+
 .projects .title {
-    left: 150px;
+    left: 300px;
     width: max-content;
 }
 
-@media screen and (max-width: 1345px) {
-    .header_img {
+@media screen and (max-width: 1360px) {
+    .header_img, .cookie_img {
         left: 420px;
         bottom: 700px;
     }
@@ -531,16 +520,42 @@ h1{
         width: 500px;
         margin-top: 150px;
     }
+    .projects .title {
+        left: 150px;
+        width: max-content;
+    }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1060px) {
     header {
         margin: 0px 0px;
         margin-bottom: 100px;
     }
+    .hero{
+        padding: 0 50px;
+    }
+
+    .header_img, .cookie_img{
+        left: 350px;
+    }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1020px) {  
+    .news img {
+        width: 200px;
+        height: 300px;
+        position: relative;
+        right: 80px;
+    }
+
+    .news .box {
+        position: relative;
+        right: 70px;
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 860px) {
     header {
         margin-bottom: 100px;
     }
@@ -549,10 +564,12 @@ h1{
         visibility:hidden;
         width: 0px;
         height: 0px;
+        transition: all 0.0s ease-in-out;
     }
 
     .logo {
         width: 50px;
+        transition: all 0.0s ease-in-out;
     }
 
     .news img {
@@ -568,26 +585,17 @@ h1{
         width: 600px;
     }
 
-    .header_img{
-        left: 50px;
+    .header_img, .cookie_img{
+        left: 260px;
     }
 }
 
-@media screen and (max-width: 1050px) {
-    .hero{
-        padding: 0 50px;
-    }
-
-    .header_img{
-        left: 350px;
-    }
-}
-
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 790px) {
     header button {
         visibility:hidden;
         width: 0px;
         height: 0px;
+        transition: all 0.0s ease-in-out;
     }
 
     .buttonlinks{
@@ -596,23 +604,24 @@ h1{
         height: 0px;
     }
 
-    .header_img{
-        left: 240px;
+    .header_img, .cookie_img{
+        left: 220px;
         scale: 0.5;
         bottom: 770px;
     }
 }
 
-@media screen and (max-width: 1020px) {  
-    .news img {
-        width: 200px;
-        height: 300px;
-        position: relative;
-        right: 80px;
+@media (max-width: 768px) {
+    .about .container {
+        flex-direction: column;
+        align-items: center;
     }
+    .about .article {
+        width: 100%;
+        height: 70px;
+    }
+}
 
-    .news .box {
-        position: relative;
-        right: 70px;
-    }
+.needcookies{
+    visibility: hidden;
 }
