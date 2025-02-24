@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function showNeedCookiesElements() {
     console.log('Zeige Elemente mit der Klasse "needcookies".');
     needCookiesElements.forEach(element => {
-      element.style.visibility = 'visible'; // Sichtbar machen
+      element.style.removeProperty( 'display' );
     });
   }
 });
