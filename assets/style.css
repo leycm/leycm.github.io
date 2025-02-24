@@ -12,6 +12,11 @@
     --bg-secondary: #00000007;
     --shadow: rgba(0, 0, 0, 0.1);
     --secondary: #141414;
+    --gray-bg: #0E0E0E;
+    --dark-gray: #1A1A1A;
+    --transparent: transparent;
+    --selection-bg: #242424;
+    --no-bg: #24242400;
 }
 
 * {
@@ -24,7 +29,7 @@ body {
     font-family: "minecraft", sans-serif;
     margin: 0;
     padding: 0;
-    ::selection { background: #242424; color: #fff; }
+    ::selection { background: var(--selection-bg); color: var(--text); }
 }
 
 a {
@@ -37,7 +42,7 @@ p {
     font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5 {
     letter-spacing: 0.1em;
     font-family: "minecraft", sans-serif;
 }
@@ -61,7 +66,7 @@ header {
 .logo a {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
     text-decoration: none;
 }
 
@@ -77,41 +82,41 @@ nav a:hover {
     color: var(--highlight);
 }
 
-button{
-  background: var(--highlight);
-  border: 1px solid var(--highlight);
-  border-radius: 6px;
-  box-shadow: var(--shadow) 1px 2px 4px;
-  box-sizing: border-box;
-  color: var(--text);
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  height: 26px;
+button {
+    background: var(--highlight);
+    border: 1px solid var(--highlight);
+    border-radius: 6px;
+    box-shadow: var(--shadow) 1px 2px 4px;
+    box-sizing: border-box;
+    color: var(--text);
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    height: 26px;
 }
 
 button:hover,
 button:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: var(--highlight);
+    background-color: initial;
+    background-position: 0 0;
+    color: var(--highlight);
 }
 
 button:active {
-  opacity: .5;
+    opacity: .5;
 }
 
 .ico_button {
@@ -120,22 +125,21 @@ button:active {
     padding: 0px 7px;
 }
 
-.buttonlinks button{
+.buttonlinks button {
     margin: 0 5px;
 }
 
-.underline{
+.underline {
     text-decoration: underline;
     text-decoration-color: var(--text);
     text-decoration-thickness: 2px;
 }
-.underline:hover{
-    text-decoration: underline;
+
+.underline:hover {
     text-decoration-color: var(--highlight);
-    text-decoration-thickness: 2px;
 }
 
-footer svg {
+footer svg, header svg {
     width: 50px;
     height: 50px;
     stroke-dasharray: 500;
@@ -146,14 +150,14 @@ footer svg {
     left: 10px;
 }
 
-footer path {
+footer path, header path {
     stroke-dasharray: 500;
     stroke-dashoffset: 500;
     animation: drawSvg 6s ease-in-out 1 forwards;
-    fill:transparent;
-    stroke:var(--highlight);
-    stroke-width:2.31684;
-    stroke-opacity:1
+    fill: var(--transparent);
+    stroke: var(--highlight);
+    stroke-width: 2.31684;
+    stroke-opacity: 1;
 }
 
 button img {
@@ -161,46 +165,20 @@ button img {
     height: 32px;
 }
 
-header svg {
-    width: 50px;
-    height: 50px;
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: drawSvg 10s ease forwards;
-    position: relative;
-    top: 7px;
-    left: 10px;
-}
-
-header path {
-    stroke-dasharray: 500;
-    stroke-dashoffset: 500;
-    animation: drawSvg 6s ease-in-out 1 forwards;
-    fill:transparent;
-    stroke:var(--highlight);
-    stroke-width:2.31684;
-    stroke-opacity:1
-}
-
 section {
     padding: 0 300px;
     padding-bottom: 100px;
 }
 
-h1{
+h1 {
     font-size: 6rem;
     margin: 0px;
 }
 
 @keyframes drawSvg {
-    0% {
-        stroke-dashoffset: 500;
-    }
-    100% {
-        stroke-dashoffset: 0;
-    }
+    0% { stroke-dashoffset: 500; }
+    100% { stroke-dashoffset: 0; }
 }
-
 
 .hero {
     padding: 0 400px;
@@ -244,7 +222,7 @@ h1{
     top: 3px;
 }
 
-.hero button{
+.hero button {
     margin-right: 10px;
 }
 
@@ -254,10 +232,10 @@ h1{
     left: 5px;
 }
 
-.trans{
+.trans {
     padding: 0px;
-    background-color: transparent;
-    border: transparent;
+    background-color: var(--transparent);
+    border: var(--transparent);
 }
 
 .header_img, .cookie_img {
@@ -268,12 +246,12 @@ h1{
     z-index: -1;
 }
 
-.gray{
-    background-color:  #0E0E0E;
+.gray {
+    background-color: var(--gray-bg);
     padding-bottom: 50px;
 }
 
-.title{
+.title {
     cursor: default;
 }
 
@@ -286,12 +264,12 @@ h1{
 }
 
 .gray .num {
-    color: #1A1A1A;
+    color: var(--dark-gray);
     font-size: 10rem;
     margin: 0;
 }
 
-.gray .num::selection { background: #24242400; color: var(--secondary);}
+.gray .num::selection { background: var(--no-bg); color: var(--secondary); }
 
 .gray .title .text {
     margin: 0;
@@ -307,8 +285,8 @@ h1{
     right: 10px;
 }
 
-.black{
-    background-color:  transparent;
+.black {
+    background-color: var(--transparent);
     padding-bottom: 50px;
 }
 
@@ -328,7 +306,7 @@ h1{
     margin: 0;
 }
 
-.black .num::selection { background: #24242400; color: #0e0e0e;}
+.black .num::selection { background: var(--no-bg); color: var(--gray-bg); }
 
 .black .title .text {
     margin: 0;
@@ -344,8 +322,8 @@ h1{
     right: 10px;
 }
 
-.black .title .test::selection {background: #24242400; color: var(--highlight);}
-.black .title .test i::selection {background: #24242400; color: var(--highlight);}
+.black .title .test::selection { background: var(--no-bg); color: var(--highlight); }
+.black .title .test i::selection { background: var(--no-bg); color: var(--highlight); }
 
 .about .container {
     display: flex;
@@ -353,11 +331,12 @@ h1{
     gap: 20px;
     justify-content: space-between;
 }
+
 .about .article {
     background: var(--background);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow);
     flex: 1 1 calc(33.333% - 20px);
     min-width: 250px;
     position: relative;
@@ -378,7 +357,7 @@ h1{
     cursor: pointer;
 }
 
-.about .icon::selection{
+.about .icon::selection {
     background: var(--highlight);
 }
 
@@ -459,12 +438,12 @@ h1{
     bottom: 260px;
 }
 
-.item .hover:hover .box{
+.item .hover:hover .box {
     transform: translateY(0px);
-} 
+}
 
 .item .hover .box {
-    background-color: transparent;
+    background-color: var(--transparent);
     border-radius: 0 0 10px 10px;
     position: relative;
     height: 66px;
@@ -474,7 +453,7 @@ h1{
     transition: bottom 10s ease-out;
 }
 
-.item .hover .box h5{
+.item .hover .box h5 {
     position: relative;
     font-family: "Minecraft";
     margin: 0;
@@ -482,7 +461,7 @@ h1{
     letter-spacing: 0.1em;
 }
 
-.item .hover .box .tags{
+.item .hover .box .tags {
     background-color: var(--highlight);
     width: max-content;
     padding: 10px;
@@ -494,7 +473,7 @@ h1{
     font-weight: 700;
 }
 
-.item .hover .box i{
+.item .hover .box i {
     position: relative;
     left: 320px;
     bottom: 50px;
@@ -593,7 +572,7 @@ footer {
     margin: 0;
 }
 
-.footer-bottom span{
+.footer-bottom span {
     color: var(--text);
     text-decoration: none;
 }
@@ -641,11 +620,11 @@ footer {
         margin: 0px 0px;
         margin-bottom: 100px;
     }
-    .hero{
+    .hero {
         padding: 0 50px;
     }
 
-    .header_img, .cookie_img{
+    .header_img, .cookie_img {
         left: 350px;
     }
 }
@@ -671,7 +650,7 @@ footer {
     }
 
     header .logo a {
-        visibility:hidden;
+        visibility: hidden;
         width: 0px;
         height: 0px;
         transition: all 0.0s ease-in-out;
@@ -695,11 +674,11 @@ footer {
         width: 600px;
     }
 
-    .header_img, .cookie_img{
+    .header_img, .cookie_img {
         left: 260px;
     }
 
-    .footer-hidde{
+    .footer-hidde {
         visibility: hidden;
         width: 0px;
         height: 0px;
@@ -707,12 +686,12 @@ footer {
         display: none;
     }
 
-    .footer-column ul{
+    .footer-column ul {
         display: flex;
         gap: 10px;
     }
 
-    .footer-content .logo{
+    .footer-content .logo {
         width: max-content;
     }
 
@@ -723,19 +702,19 @@ footer {
 
 @media screen and (max-width: 790px) {
     header button {
-        visibility:hidden;
+        visibility: hidden;
         width: 0px;
         height: 0px;
         transition: all 0.0s ease-in-out;
     }
 
-    .buttonlinks{
-        visibility:hidden;
+    .buttonlinks {
+        visibility: hidden;
         width: 0px;
         height: 0px;
     }
 
-    .header_img, .cookie_img{
+    .header_img, .cookie_img {
         left: 220px;
         scale: 0.5;
         bottom: 770px;
@@ -756,7 +735,7 @@ footer {
 @media (max-width: 717px) {
     .footer-bottom a {
         float: none;
-        margin:  0 auto;
+        margin: 0 auto;
     }
 
     .footer-bottom .r {
@@ -764,24 +743,22 @@ footer {
         margin: 0 auto;
     }
 
-    .footer-bottom{
+    .footer-bottom {
         text-align: center;
     }
 }
 
-.needcookies{
+.needcookies {
     visibility: hidden;
 }
 
-
-/* Allgemeine Stile für das Impressum */
 .impressum {
     padding: 50px 0;
 }
 
 .impressum .title {
     margin-bottom: 50px;
-    position:static;
+    position: static;
 }
 
 .impressum .title .num {
@@ -806,6 +783,11 @@ footer {
 
 .impressum h2 {
     width: max-content;
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
 }
 
 .impressum .content {
@@ -814,15 +796,7 @@ footer {
     padding: 20px;
     background-color: var(--bg-secondary);
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.impressum h2 {
-    color: var(--highlight);
-    font-size: 2rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    position: relative;
+    box-shadow: 0 4px 8px var(--shadow);
 }
 
 .impressum h2::after {
@@ -880,13 +854,11 @@ footer {
     font-weight: bold;
 }
 
-/* Hover-Effekte für Links */
 .impressum .content a:hover {
     color: var(--text);
     text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .impressum .title .num {
         font-size: 6rem;
