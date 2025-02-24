@@ -74,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log('Zeige Elemente mit der Klasse "needcookies".');
     needCookiesElements.forEach(element => {
       element.style.removeProperty( 'display' );
-      element.style.display='none';
+      element.style.display = null;
+      element.style.visibility = true;
     });
   }
 });
