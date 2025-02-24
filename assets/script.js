@@ -5,7 +5,7 @@ window.onload = function() {
 
   const imgElement = document.querySelector(".header_img");
   if (imgElement) {
-    imgElement.src = `assets/img/header/${randomImageIndex}.png`;
+    imgElement.src = `assets/img/header/${randomImageIndex}.webp`;
   }
 };
 
