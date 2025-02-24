@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
       element.style.display = 'block';
       element.style.visibility = 'visibile';
     });
-    needCookieaNews.forEach(element => {
+    needCookiesNews.forEach(element => {
       element.style.removeProperty( 'display' );
       element.style.display = 'flex';
       element.style.visibility = 'visibile';
