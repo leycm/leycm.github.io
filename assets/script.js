@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const cookieConsent = document.getElementById('cookie-consent');
   const acceptCookiesButton = document.getElementById('accept-cookies');
   const needCookiesElements = document.querySelectorAll('.needcookies');
+  const needCookiesNews = document.querySelectorAll('.news');
 
   console.log("Cookie-Consent-Element:", cookieConsent);
   console.log("Accept-Cookies-Button:", acceptCookiesButton);
@@ -75,6 +76,11 @@ document.addEventListener("DOMContentLoaded", function() {
     needCookiesElements.forEach(element => {
       element.style.removeProperty( 'display' );
       element.style.display = 'block';
+      element.style.visibility = 'visibile';
+    });
+    needCookieaNews.forEach(element => {
+      element.style.removeProperty( 'display' );
+      element.style.display = 'flex';
       element.style.visibility = 'visibile';
     });
   }
