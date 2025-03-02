@@ -2,21 +2,21 @@
 
 ## Angaben gemäß § 5 TMG
 
-Max Mustermann  
-Musterstraße 123  
-12345 Musterstadt  
+Lennard Tony  
+Boskopweg 24  
+70329 Stuttgart  
 Deutschland
 
 ## Kontakt
 
-Telefon: +49 123 456789  
-E-Mail: info@mustermann.de
+Telefon: +49 143 25437239  
+E-Mail: cm.ley.cm@gmail.com
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 
-Max Mustermann  
-Musterstraße 123  
-12345 Musterstadt  
+BobTony  
+Boskopweg 23  
+70329 Stuttgart  
 Deutschland
 
 ## Haftungsausschluss
