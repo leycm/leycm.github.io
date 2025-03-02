@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :root {
@@ -33,6 +34,7 @@ body {
     font-family: "minecraft", sans-serif;
     margin: 0;
     padding: 0;
+    overflow: hidden;
     ::selection { background: var(--selection-bg); color: var(--text); }
 }
 
@@ -954,13 +956,12 @@ footer {
 body{
     scale: 1.5;
     margin: 20%;
-    margin-top: 680px;
     
 }
 
 header {
     margin: 0px;
-    margin-top: 680px;
+    margin-top: 160px;
 }
 
 .grey {
