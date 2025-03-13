@@ -15,6 +15,10 @@
     --table-header-bg: #363636;
 }
 
+img {
+    max-width: 100%;
+}
+
 footer{
     position: relative;
     bottom: 800px;
@@ -30,7 +34,6 @@ section {
     margin: 0 auto;
 }
 
-section {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--text-secondary);
