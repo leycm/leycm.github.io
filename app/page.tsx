@@ -172,7 +172,7 @@ export default function Portfolio() {
 						state="In Progress"
 						tags={[tags.react, tags.typescript, tags.tailwindcss]}
 						github="#"
-						images={[demo]}
+						images={[demo, demo, demo]}
 					/>
 					<Experience
 						title="Project 2"

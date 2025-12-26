@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e846318-1535-402e-ac9d-ce14a02ab56b" name="Changes" comment="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1e846318-1535-402e-ac9d-ce14a02ab56b" name="Changes" comment="Refactor icon components to use react-icons library; update AboutMe and page components to utilize new icon imports">
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/icons.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/tech.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/tech.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +118,7 @@
       <workItem from="1766609635302" duration="2805000" />
       <workItem from="1766658582486" duration="3640000" />
       <workItem from="1766693374751" duration="2972000" />
-      <workItem from="1766750752607" duration="3156000" />
+      <workItem from="1766750752607" duration="3973000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with core components and configuration files">
       <option name="closed" value="true" />
@@ -145,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766760220690</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor icon components to use react-icons library; update AboutMe and page components to utilize new icon imports">
+      <option name="closed" value="true" />
+      <created>1766761075303</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1766761075303</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,7 +162,8 @@
     <MESSAGE value="Add initial project structure with core components and configuration files" />
     <MESSAGE value="Update workspace configuration to include project structure and Git settings" />
     <MESSAGE value="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration" />
+    <MESSAGE value="Refactor icon components to use react-icons library; update AboutMe and page components to utilize new icon imports" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor icon components to use react-icons library; update AboutMe and page components to utilize new icon imports" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
