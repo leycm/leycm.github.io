@@ -78,35 +78,68 @@ export function GitHubStats({ username }: GitHubStatsProps) {
 
   return (
     <div className="mt-12 lg:mt-12 opacity-100">
-      <h2 className="text-sm lg:text-lg mb-4 text-slate-400 font-medium">
-        {stats.loading ? 'Loading GitHub Stats...' : 'GitHub Activity (last 12 months)'}
-      </h2>
-      <div className="max-w-2xl grid grid-cols-2 gap-4 lg:grid-cols-5">
-        <StatItem 
-          icon={GitCommitHorizontal} 
-          label="Commits" 
-          value={stats.commits} 
-        />
-        <StatItem 
-          icon={Bug} 
-          label="Issues" 
-          value={stats.issues} 
-        />
-        <StatItem 
-          icon={GitPullRequest} 
-          label="PRs" 
-          value={stats.pullRequests} 
-        />
-        <StatItem 
-          icon={Star} 
-          label="Stars" 
-          value={stats.stars} 
-        />
-        <StatItem 
-          icon={Users} 
-          label="Followers" 
-          value={stats.followers} 
-        />
+      {/* Mobile View - Simplified */}
+      <div className="lg:hidden">
+        <h2 className="text-sm mb-4 text-slate-400 font-medium">
+          {stats.loading ? 'GitHub Stats...' : 'GitHub Stats'}
+        </h2>
+        <div className="grid grid-cols-3 gap-3">
+          <div className="flex items-center gap-2 text-white">
+            <GitCommitHorizontal className="w-5 h-5 text-slate-300" />
+            <span className="font-mono font-bold">{stats.loading ? '...' : stats.commits.toLocaleString()}</span>
+          </div>
+          <div className="flex items-center gap-2 text-white">
+            <Bug className="w-5 h-5 text-slate-300" />
+            <span className="font-mono font-bold">{stats.loading ? '...' : stats.issues.toLocaleString()}</span>
+          </div>
+          <div className="flex items-center gap-2 text-white">
+            <GitPullRequest className="w-5 h-5 text-slate-300" />
+            <span className="font-mono font-bold">{stats.loading ? '...' : stats.pullRequests.toLocaleString()}</span>
+          </div>
+          <div className="flex items-center gap-2 text-white">
+            <Star className="w-5 h-5 text-slate-300" />
+            <span className="font-mono font-bold">{stats.loading ? '...' : stats.stars.toLocaleString()}</span>
+          </div>
+          <div className="flex items-center gap-2 text-white">
+            <Users className="w-5 h-5 text-slate-300" />
+            <span className="font-mono font-bold">{stats.loading ? '...' : stats.followers.toLocaleString()}</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop View - Original */}
+      <div className="hidden lg:block">
+        <h2 className="text-lg mb-4 text-slate-400 font-medium">
+          {stats.loading ? 'Loading GitHub Stats...' : 'GitHub Activity (last 12 months)'}
+        </h2>
+        <div className="max-w-2xl grid grid-cols-5 gap-4">
+          <StatItem 
+            icon={GitCommitHorizontal} 
+            label="Commits" 
+            value={stats.commits} 
+          />
+          <StatItem 
+            icon={Bug} 
+            label="Issues" 
+            value={stats.issues} 
+          />
+          <StatItem 
+            icon={GitPullRequest} 
+            label="PRs" 
+            value={stats.pullRequests} 
+          />
+          <StatItem 
+            icon={Star} 
+            label="Stars" 
+            value={stats.stars} 
+          />
+          <StatItem 
+            icon={Users} 
+            label="Followers" 
+            value={stats.followers} 
+            className="col-start-5"
+          />
+        </div>
       </div>
     </div>
   );

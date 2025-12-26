@@ -20,10 +20,10 @@ type AboutMeProps = {
 
 export function AboutMe({ name, description, socialLinks, image }: AboutMeProps) {
   return (
-    <div className="max-w-4xl ml-8 mb-16 mt-16 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-        <div className="flex flex-col gap-8">
-          {/* Profile Picture */}
+    <div className="max-w-4xl mx-4 sm:ml-8 mb-8 sm:mb-16 mt-8 sm:mt-16 py-8 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12">
+        {/* Profile Picture - Hidden on mobile */}
+        <div className="hidden md:flex flex-col gap-8">
           <div className="w-48 h-48 md:w-64 md:h-64 relative rounded-lg overflow-hidden">
             {image? (
               <Image
@@ -39,42 +39,38 @@ export function AboutMe({ name, description, socialLinks, image }: AboutMeProps)
               </div>
             )}
           </div>
-          
-          
         </div>
         
         {/* Content */}
-        <div className="flex-1">
-          <div className="mb-6">
-            <h1 className={`text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl leading-10`}>
+        <div className="flex-1 w-full">
+          <div className="mb-4 sm:mb-6">
+            <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight`}>
               Hi, I'm <span className="text-slate-400">{name}</span>
             </h1>
-            <span className={`${jetbrainsMono.className} font-semibold text-2xl text-slate-500 leading-10`}>
+            <span className={`${jetbrainsMono.className} font-semibold text-xl sm:text-2xl text-slate-500`}>
               aka leycm
             </span>
           </div>
           
-          <p className="text-lg text-slate-300 max-w-2xl mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mb-6 sm:mb-8 leading-relaxed">
             {description}
           </p>
           
+        
         </div>
       </div>
-
-      <div className="space-y-14">
-        <div className="flex flex-wrap gap-4 max-w-3xl">
-          {socialLinks.map((link) => (
-            <Button
-              key={link.name}
-              icon={() => link.icon}
-              name={link.username || link.name}
-              href={link.url}
-              className="bg-slate-800 hover:bg-slate-700"
-            />
-          ))}
-        </div>
-        <div className="space-y-34"></div>
-        {/* GitHub Stats */}
+      <div className="flex flex-wrap gap-3 sm:gap-4">
+        {socialLinks.map((link) => (
+          <Button
+            key={link.name}
+            icon={() => link.icon}
+            name={link.username || link.name}
+            href={link.url}
+            className="bg-slate-800 hover:bg-slate-700 text-sm sm:text-base"
+          />
+        ))}
+      </div>
+      <div className="mt-8 sm:mt-12">
         <GitHubStats username="leycm" />
       </div>
     </div>
