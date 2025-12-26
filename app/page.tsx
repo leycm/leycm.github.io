@@ -4,10 +4,10 @@ import { Sidebar, SidebarTitle, SidebarName, SidebarSubtitle, SidebarNavigation,
 import { SidebarNavItem } from "@/components/sidebar-client";
 import { getMyAge, getYearsOfExperience } from "@/lib/age";
 import { Tech } from "@/components/tech";
-import { FaJava, FaPython, FaDocker, FaGitAlt, FaLinkedin, FaTwitter, FaStackOverflow, FaDev, FaGithub } from "react-icons/fa";
+import {FaJava, FaPython, FaDocker, FaGitAlt, FaLinkedin, FaStackOverflow, FaGithub, FaDiscord} from "react-icons/fa";
 import { SiKotlin, SiGo, SiSpring, SiRedis } from "react-icons/si";
 import { tags } from "./tags";
-import { Email, GitHub, Globe, Discord } from "@/components/icons";
+import { Email } from "@/components/icons";
 import Quote from "@/components/quote";
 import { AboutMe } from "@/components/about";
 
@@ -45,7 +45,7 @@ export default function Portfolio() {
           <SidebarNavigation inter>
             <SidebarNavLink href="https://github.com/leycm">
               <div className="flex flex-row items-end gap-4">
-                <GitHub size={32} />
+                <FaGithub size={32} />
                 <span>{"leycm"}</span>
               </div>
             </SidebarNavLink>
@@ -54,7 +54,7 @@ export default function Portfolio() {
 			</Sidebar>
 			<Content>
 				<Section id="about">
-					<ContentTitle className="pt-20">About Me</ContentTitle>
+					<ContentTitle>About Me</ContentTitle>
 					<AboutMe 
 					  name="Lennard"
 					  description="German Student with a passion for computer science, specializing in Java and Backend development. I'm deeply passionate about Object-Oriented Programming and currently pursuing my studies in Germany. When I'm not coding, you can find me exploring new technologies, contributing to open source, or sharing my knowledge with the community."
@@ -93,7 +93,7 @@ export default function Portfolio() {
 					    {
 					      name: 'Discord',
 					      url: 'https://discordapp.com/users/1063519999886622801',
-					      icon: <Discord size={16} />,
+					      icon: <FaDiscord size={16} />,
 					      username: 'leycm'
 					    }
 				  ]}

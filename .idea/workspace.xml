@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e846318-1535-402e-ac9d-ce14a02ab56b" name="Changes" comment="Update workspace configuration to include project structure and Git settings">
+    <list default="true" id="1e846318-1535-402e-ac9d-ce14a02ab56b" name="Changes" comment="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/experience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebar-client.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebar-client.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hooks/observer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/hooks/observer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/age.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/age.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/icons.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/icons.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +119,7 @@
       <workItem from="1766609635302" duration="2805000" />
       <workItem from="1766658582486" duration="3640000" />
       <workItem from="1766693374751" duration="2972000" />
-      <workItem from="1766750752607" duration="2421000" />
+      <workItem from="1766750752607" duration="3156000" />
     </task>
     <task id="LOCAL-00001" summary="Add initial project structure with core components and configuration files">
       <option name="closed" value="true" />
@@ -144,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766704501054</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration">
+      <option name="closed" value="true" />
+      <created>1766760220689</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766760220690</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +154,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add initial project structure with core components and configuration files" />
     <MESSAGE value="Update workspace configuration to include project structure and Git settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update workspace configuration to include project structure and Git settings" />
+    <MESSAGE value="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Enhance AboutMe component with profile image and social links; refactor age calculation functions and update GitHub stats integration" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
