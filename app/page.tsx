@@ -2,9 +2,9 @@ import { Content, ContentTitle, Page, Section } from "@/components/content";
 import { Experience, ExperienceAndProjects, TimelineEnd, TimelineStart } from "@/components/experience";
 import { Sidebar, SidebarTitle, SidebarName, SidebarSubtitle, SidebarNavigation, SidebarNavLink } from "@/components/sidebar";
 import { SidebarNavItem } from "@/components/sidebar-client";
-import { getMyAge } from "@/lib/age";
+import { getMyAge, getYearsOfExperience } from "@/lib/age";
 import { Tech } from "@/components/tech";
-import { FaJava, FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaJava, FaPython, FaDocker, FaGitAlt, FaLinkedin, FaTwitter, FaStackOverflow, FaDev, FaGithub } from "react-icons/fa";
 import { SiKotlin, SiGo, SiSpring, SiRedis } from "react-icons/si";
 import { tags } from "./tags";
 import { Email, GitHub, Globe, Discord } from "@/components/icons";
@@ -12,6 +12,8 @@ import Quote from "@/components/quote";
 import { AboutMe } from "@/components/about";
 
 import demo from "@/images/demo.png";
+import profile from "@/images/profile.png";
+import { FaBluesky } from "react-icons/fa6";
 
 export default function Portfolio() {
 	return (
@@ -52,23 +54,50 @@ export default function Portfolio() {
 			</Sidebar>
 			<Content>
 				<Section id="about">
-					<ContentTitle>About Me</ContentTitle>
+					<ContentTitle className="pt-20">About Me</ContentTitle>
 					<AboutMe 
-					name="Lennard"
-					description="German Student with a passion for computer science, specializing in Java and Backend development. I'm deeply passionate about Object-Oriented Programming and currently pursuing my studies in Germany."
-					socialLinks={[
-						{
-						name: 'GitHub',
-						url: 'https://github.com/leycm',
-						icon: <GitHub size={20} className="w-5 h-5" />
-						},
-						{
-						name: 'Website',
-						url: 'https://example.com',
-						icon: <Globe size={20} className="w-5 h-5" />
-						}
-					]}
-					/>
+					  name="Lennard"
+					  description="German Student with a passion for computer science, specializing in Java and Backend development. I'm deeply passionate about Object-Oriented Programming and currently pursuing my studies in Germany. When I'm not coding, you can find me exploring new technologies, contributing to open source, or sharing my knowledge with the community."
+					  image={profile}
+					  socialLinks={[
+					    {
+					      name: 'GitHub',
+					      url: 'https://github.com/leycm',
+					      icon: <FaGithub size={16} />,
+					      username: 'leycm'
+					    },
+					    {
+					      name: 'LinkedIn',
+					      url: 'https://linkedin.com/in/leycm',
+					      icon: <FaLinkedin size={16} />,
+					      username: 'in/leycm'
+					    },
+					    {
+					      name: 'Twitter',
+					      url: 'https://bsky.app/@leycm',
+					      icon: <FaBluesky size={16} />,
+					      username: '@leycm'
+					    },
+					    {
+					      name: 'Email',
+					      url: 'mailto:leycm@proton.me',
+					      icon: <Email size={16} />,
+					      username: 'leycm@proton.me'
+					    },
+					    {
+					      name: 'Stack Overflow',
+					      url: 'https://stackoverflow.com/users/30135628',
+					      icon: <FaStackOverflow size={16} />,
+					      username: 'leycm'
+					    },
+					    {
+					      name: 'Discord',
+					      url: 'https://discordapp.com/users/1063519999886622801',
+					      icon: <Discord size={16} />,
+					      username: 'leycm'
+					    }
+				  ]}
+				/>
 				</Section>
 				<Section id="tech">
 					<ContentTitle>Tech Stack</ContentTitle>

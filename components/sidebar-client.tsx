@@ -4,7 +4,7 @@ import { useObserver } from "@/hooks/observer";
 import { cn } from "@/lib/utils";
 
 export function SidebarNavItem({ children, section }: { children: React.ReactNode; section: string; }) {
-	const active = useObserver(["experience", "tech", "about"]);
+	const active = useObserver(["about", "tech", "experience"]);
 
 	const navigate = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		event.preventDefault();

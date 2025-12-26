@@ -18,7 +18,7 @@ export function Content({ children }: { children: React.ReactNode; }) {
 
 export function ContentTitle({ children }: { children: React.ReactNode; }) {
 	return (
-		<h1 className={`${jetbrainsMono.className} pl-16 pt-16 text-3xl font-semibold text-slate-500`}>
+		<h1 className={`${jetbrainsMono.className} pl-16 pt-20 text-3xl font-semibold text-slate-500`}>
 			{children}
 		</h1>
 	);

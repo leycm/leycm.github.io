@@ -4,6 +4,7 @@ import { Globe } from "@/components/icons";
 import Carousel from "./carousel";
 import { StaticImageData } from "next/image";
 import { GitHub } from "./icons";
+import { Button } from "./button";
 
 export function ExperienceAndProjects({ children }: { children: React.ReactNode; }) {
 	return (
@@ -56,57 +57,58 @@ export function Experience({ title, content, time, state, tags, github, images, 
 				{(github || website || (tags && tags.length > 0)) && (
 					<div className="flex flex-row flex-wrap max-w-[70ch] items-center gap-2">
 						{github && (
-							<a className={`${jetbrainsMono.className} border-2 hover:border-slate-500 py-2 px-4 rounded-2xl text-lg font-semibold text-slate-500 transition-colors duration-100 cursor-pointer flex flex-row items-center gap-4 group`} href={github} target="_blank" rel="noopener" referrerPolicy="no-referrer">
-								<GitHub size={28} className="group-hover:text-slate-300" />
-								<span className="group-hover:text-slate-300">{"View on GitHub"}</span>
-							</a>
-						)}
-						{website && (
-							<a className={`${jetbrainsMono.className} border-2 hover:border-slate-500 py-2 px-4 rounded-2xl text-lg font-semibold text-slate-500 transition-colors duration-100 cursor-pointer flex flex-row items-center gap-4 group`} href={website} target="_blank" rel="noopener" referrerPolicy="no-referrer">
-								<Globe size={28} className="group-hover:text-slate-300" />
-								<span className="group-hover:text-slate-300">{"Visit Website"}</span>
-							</a>
-						)}
-						{(github || website) && tags && tags.length > 0 && (
-							<div className="h-1.5 w-1.5 mx-4 rounded-full bg-slate-500"></div>
-						)}
-						{tags?.map((tag, index) => (
-							<Tag key={index} tag={tag} />
-						))}
-					</div>
-				)}
+								<Button
+									icon={() => <GitHub size={20} />}
+									name="View on GitHub"
+									href={github}
+								/>
+							)}
+							{website && (
+								<Button
+									icon={() => <Globe size={20} />}
+									name="Visit Website"
+									href={website}
+								/>
+							)}
+							{(github || website) && tags && tags.length > 0 && (
+								<div className="h-1.5 w-1.5 mx-4 rounded-full bg-slate-500"></div>
+							)}
+							{tags?.map((tag, index) => (
+								<Tag key={index} tag={tag} />
+							))}
+						</div>
+					)}
 			</div>
 		</>
 	);
 }
 
 function Tag({ tag }: { tag: TagType | undefined }) {
-	if (!tag) return null;
+  if (!tag) return null;
 
-	const tagContent = (
-		<>
-			{tag.icon && <span>{tag.icon}</span>}
-			<span className={tag.url ? 'group-hover:text-slate-300' : ''}>{tag.name}</span>
-		</>
-	);
+  const content = (
+    <>
+      {tag.icon && <span>{tag.icon}</span>}
+      <span>{tag.name}</span>
+    </>
+  );
 
-	if (tag.url) {
-		return (
-			<a 
-				className={`${jetbrainsMono.className} border-2 hover:border-slate-500 py-2 px-4 rounded-2xl text-lg font-semibold text-slate-500 transition-colors duration-100 cursor-pointer flex flex-row items-center gap-4 group`} 
-				href={tag.url} 
-				target="_blank" 
-				rel="noopener" 
-				referrerPolicy="no-referrer"
-			>
-				{tagContent}
-			</a>
-		);
-	}
+  if (tag.url) {
+    const Icon = tag.icon ? () => <>{tag.icon}</> : () => null;
+    return (
+      <Button
+        icon={Icon}
+        name={tag.name}
+        href={tag.url}
+      />
+    );
+  }
 
-	return (
-		<span className={`${jetbrainsMono.className} border-2 hover:border-slate-500 py-2 px-4 rounded-2xl text-lg font-semibold text-slate-500 hover:text-slate-300 transition-colors duration-100 cursor-pointer flex flex-row items-center gap-4 group`}>
-			{tagContent}
-		</span>
-	);
+  return (
+      <Button
+        icon={() => <>{tag.icon}</>}
+        name={tag.name}
+        href="#"
+      />
+  );
 }

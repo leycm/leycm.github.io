@@ -1,10 +1,13 @@
-const ONE_YEAR_MS = 31556952000;
-const BIRTH_MS = 1256083200000; 
-
-function getAge(birthInMS: number): number {
-	return Math.floor((Date.now() - birthInMS) / ONE_YEAR_MS);
+export function getYears(startDate: Date): number {
+    const ageDifMs = Date.now() - startDate.getTime();
+    const ageDate = new Date(ageDifMs);
+    return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
 export function getMyAge(): number {
-	return getAge(BIRTH_MS);
+    return getYears(new Date("2009-10-31"));
+}
+
+export function getYearsOfExperience(): number {
+	return getYears(new Date("2021-07-08"));
 }
