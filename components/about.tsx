@@ -45,7 +45,7 @@ export function AboutMe({ name, description, socialLinks, image }: AboutMeProps)
         <div className="flex-1 w-full">
           <div className="mb-4 sm:mb-6">
             <h1 className={`text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white leading-tight`}>
-              Hi, I'm <span className="text-slate-400">{name}</span>
+              Hi, I&apos;m <span className="text-slate-400">{name}</span>
             </h1>
             <span className={`${jetbrainsMono.className} font-semibold text-xl sm:text-2xl text-slate-500`}>
               aka leycm

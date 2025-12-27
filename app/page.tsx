@@ -2,9 +2,9 @@ import { Content, ContentTitle, Page, Section } from "@/components/content";
 import { Experience, ExperienceAndProjects, TimelineEnd, TimelineStart } from "@/components/experience";
 import { Sidebar, SidebarTitle, SidebarName, SidebarSubtitle, SidebarNavigation, SidebarNavLink } from "@/components/sidebar";
 import { SidebarNavItem } from "@/components/sidebar-client";
-import { getMyAge, getYearsOfExperience } from "@/lib/age";
+import { getMyAge } from "@/lib/age";
 import { Tech } from "@/components/tech";
-import {FaJava, FaPython, FaDocker, FaGitAlt, FaLinkedin, FaStackOverflow, FaGithub, FaDiscord} from "react-icons/fa";
+import {FaJava, FaPython, FaDocker, FaGitAlt, FaLinkedin, FaStackOverflow, FaGithub, FaDiscord, FaBluesky} from "react-icons/fa6";
 import { SiKotlin, SiGo, SiSpring, SiRedis } from "react-icons/si";
 import { tags } from "./tags";
 import { Email } from "@/components/icons";
@@ -13,7 +13,6 @@ import { AboutMe } from "@/components/about";
 
 import demo from "@/images/demo.png";
 import profile from "@/images/profile.png";
-import { FaBluesky } from "react-icons/fa6";
 
 export default function Portfolio() {
 	return (
@@ -105,13 +104,14 @@ export default function Portfolio() {
 						<Tech tech={{
 							name: "Java",
 							description: "OOP based language with strong type security.",
-							usecase: "for large applications and robust backend systems",
+							usage: "for large applications and robust backend systems",
 							familiarity: "Extensive experience with Java and its ecosystem",
 							color: "#5382A1",
 							icon: <FaJava />
 						}} />
 						<Tech tech={{
 							name: "Spring",
+							description: "OOP based language with strong type security.",
 							usage: "Developing RESTful APIs and microservices with Spring Boot and Spring Cloud",
 							familiarity: "Proficient in building scalable microservice architectures",
 							color: "#6DB33F",
@@ -119,6 +119,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Kotlin",
+							description: "OOP based language with strong type security.",
 							usage: "Developing Android applications and backend services",
 							familiarity: "Comfortable with coroutines and modern Kotlin features",
 							color: "#7F52FF",
@@ -126,6 +127,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Go",
+							description: "OOP based language with strong type security.",
 							usage: "Building high-performance microservices and CLI applications",
 							familiarity: "Experience with goroutines and building REST APIs",
 							color: "#00ADD8",
@@ -133,6 +135,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Python",
+							description: "OOP based language with strong type security.",
 							usage: "Automation scripts, data processing, and backend development",
 							familiarity: "Extensive experience with Python ecosystem and libraries",
 							color: "#3776AB",
@@ -140,6 +143,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Redis",
+							description: "OOP based language with strong type security.",
 							usage: "Caching layer and real-time data processing",
 							familiarity: "Experience with Redis for caching and pub/sub",
 							color: "#DC382D",
@@ -147,6 +151,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Docker",
+							description: "OOP based language with strong type security.",
 							usage: "Containerizing applications and setting up development environments",
 							familiarity: "Proficient with multi-stage builds and Docker Compose",
 							color: "#2496ED",
@@ -154,6 +159,7 @@ export default function Portfolio() {
 						}} />
 						<Tech tech={{
 							name: "Git",
+							description: "OOP based language with strong type security.",
 							usage: "Version control and collaborative development workflows",
 							familiarity: "Proficient with Git workflows and CI/CD integration",
 							color: "#F05032",

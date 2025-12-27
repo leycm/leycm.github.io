@@ -3,7 +3,7 @@ import { inter, jetbrainsMono } from "@/lib/fonts";
 export type Tech = {
   name: string;
   description: string;
-  usecase: string;
+  usage: string;
   familiarity: string;
   color: string;
   icon: JSX.Element;
@@ -69,7 +69,7 @@ export function Tech({ tech }: TechProps) {
             <span className="text-slate-400">
               I use <span style={{ color: tech.color, fontWeight: 500 }}>{tech.name}</span>
             </span>
-            <span className="text-slate-300"> {tech.usecase}</span>
+            <span className="text-slate-300"> {tech.usage}</span>
           </p>
           
           <p className="mb-2">
